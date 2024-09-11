@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 1.25rem;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    color: #333;
+    flex-grow: 1;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+form ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form li {
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom:.5em;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: .8rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.pesan-error {
+    color: red;
+    font-style: italic;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+.logout {
+    font-size: 1rem;
+}
+
+.home {
+    font-size: 1rem;
+}
+
+.garis {
+    border: 1px solid #ccc;
+    margin-bottom: 2rem;
+}
+
+.form-admin {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.btn-tambah {
+    background-color: #26863e;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 700;
+    border: none;
+    padding: .8em 1.2em;
+    border-radius:.5rem;
+    cursor: pointer;
+}
+
+.btn-tambah:hover {
+    opacity: .8;
+    text-decoration: none;
+}
+
+.btn-cari {
+    margin-left: 1rem;
+    background-color: #337ab7;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 700;
+    border: none;
+    padding:.8em 1.2em;
+    border-radius:.5rem;
+    cursor: pointer;
+}
+
+.btn-cari:hover {
+    opacity: .8;
+    text-decoration: none;
+}
+
+.btn-register {
+    background-color: #26863e;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 700;
+    border: none;
+    padding: 1em 1.5em;
+    border-radius:.5rem;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    opacity: .8;
+    text-decoration: none;
+}
+
+.input-cari {
+    width: 300px; /* Lebar diatur ke 300px */
+    padding: 10px; /* Memberikan ruang di dalam input */
+    font-size: 16px; /* Ukuran teks */
+    border: 1px solid #ccc; /* Border input */
+    border-radius: 5px; /* Sudut membulat */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    transition: all 0.3s ease; /* Transisi saat di hover */
+    display: inline-block; /* Memastikan input tidak mengambil full width */
+}
+
+.input-cari:focus {
+    outline: none; /* Menghapus outline browser saat fokus */
+    border-color: #007BFF; /* Warna border saat input aktif */
+    box-shadow: 0px 2px 8px rgba(0, 123, 255, 0.3); /* Bayangan saat fokus */
+}
+
+.input-register {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.input-register:focus {
+    outline: none;
+    border-color: #26863e;
+    box-shadow: 0px 2px 8px rgba(9, 255, 0, 0.3);
+}
+
+.input-tambah[type="text"],
+.input-tambah[type="number"] {
+    width: 100%;
+    padding: .8em;
+    border: 1px solid #ccc;
+    border-radius: .4rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.input-tambah[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    font-size: .8rem;
+    font-weight: 500;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.table-buku {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0 1.25rem 0;
+}
+
+.table-buku th,
+.table-buku td {
+    padding: .8em 1em;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table-buku th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.table-buku tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-buku tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-buku tbody td {
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo img {
+        max-width: 60px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: .9rem;
+    }
+
+    .logout {
+        font-size: .7rem;
+    }
+
+    .home {
+        font-size: .7rem;
+    }
+
+    .btn-tambah {
+        font-size:.7rem;
+        padding:.6rem 0.8rem;
+    }
+
+    .input-cari {
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: .8rem;
+    }
+
+    .btn-cari {
+        margin: 0;
+        font-size:.6rem;
+        padding:.6rem 0.8rem;
+    }
+
+    .form-admin {
+        font-size: .8rem;
+    }
+
+    .table-buku,
+    .table-buku thead,
+    .table-buku tbody,
+    .table-buku th,
+    .table-buku td,
+    .table-buku tr {
+        display: block;
+    }
+
+    /* Hilangkan header tabel pada layar mobile */
+    .table-buku thead {
+        display: none;
+    }
+
+    /* Setiap baris diubah menjadi blok */
+    .table-buku tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: .8rem;
+    }
+
+    /* Setiap cell diubah menjadi tampilan "card" */
+    .table-buku td {
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Menambahkan label dari header pada masing-masing cell */
+    .table-buku td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        padding-right: .8rem;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Styling untuk tampilan yang lebih rapi */
+    .table-buku td:last-child {
+        border-bottom: 0;
+    }
+
+    .link-aksi {
+        display: inline-block;
+        font-size: .7rem;
+    }
+
+    .input-tambah[type="text"],
+    .input-tambah[type="number"] {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    h1 {
+        word-break: break-word;
+        max-width: 300px;
+    }
+
+    .table-buku,
+    .table-buku thead,
+    .table-buku tbody,
+    .table-buku th,
+    .table-buku td,
+    .table-buku tr {
+        display: block;
+    }
+
+    /* Hilangkan header tabel pada layar mobile */
+    .table-buku thead {
+        display: none;
+    }
+
+    /* Setiap baris diubah menjadi blok */
+    .table-buku tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: .8rem;
+    }
+
+    /* Setiap cell diubah menjadi tampilan "card" */
+    .table-buku td {
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Menambahkan label dari header pada masing-masing cell */
+    .table-buku td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        padding-right: .8rem;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Styling untuk tampilan yang lebih rapi */
+    .table-buku td:last-child {
+        border-bottom: 0;
+    }
+
+}
+
+
+
