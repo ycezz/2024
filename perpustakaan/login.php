@@ -21,6 +21,9 @@ if( isset($_POST["login"]) ) {
         // cek password
         $row = mysqli_fetch_assoc($result);
         if( password_verify($password, $row["password"]) ) {
+            // set session
+            $_SESSION["login"] = true;
+            
             header("Location: index.php");
             exit;
             }
@@ -45,7 +48,11 @@ if( isset($_POST["login"]) ) {
 
         <div class="header">
     
-             <h1>Login Admin Perpustakaan</h1>
+            <a href="index.php" class="logo"><img src="./img/logo.png" alt="Logo Perpustakaan"></a>
+    
+            <h1>Halaman Login</h1>
+
+            <a href="registrasi.php" class="logout">Registrasi ➡ </a>                           
 
         </div>
 

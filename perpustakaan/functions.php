@@ -25,6 +25,12 @@ function tambah($data) {
     $gambar = htmlspecialchars($data["gambar"]);
     $stok = htmlspecialchars($data["stok"]);
 
+    // upload gambar
+    $gambar = upload();
+    if (!$gambar) {
+        return false;
+    }
+
     // query insert data
     $query = "INSERT INTO buku
                 VALUES
@@ -32,6 +38,52 @@ function tambah($data) {
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
+}
+
+function upload() {
+    $namaFile = $_FILES['gambar']['name'];
+    $ukuranFile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpName = $_FILES['gambar']['tmp_name'];
+
+    if( $error === 5 ) {
+        echo "
+            <script>
+                alert('Pilih gambar terlebih dahulu.');
+            </script>;
+        return false;
+        ";
+    }
+
+    $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+    $ekstensiGambar = explode('.', $namaFile);
+    $ekstensiGambar = strtolower(end($ekstensiGambar));
+    if( !in_array($ekstensiGambar, $ekstensiGambarValid) ) {
+        echo "
+            <script>
+                alert('yang anda upload bukan gambar');
+            </script>;
+            return false;
+        ";
+    }
+
+    if( $ukuranFile > 1000000 ) {
+        echo "
+            <script>
+                alert('Ukuran gambar terlalu besar');
+            </script>;    
+        return false;
+        ";
+    }
+
+    $namaFileBaru = uniqid();
+    $namaFileBaru .= '.';
+    $namaFileBaru .= $ekstensiGambar;
+
+    move_uploaded_file($tmpName, 'img/'.$namaFileBaru);
+
+    return $namaFileBaru;
+
 }
 
 function hapus($id_buku) {
@@ -52,7 +104,14 @@ function ubah($data) {
     $penulis = htmlspecialchars($data["penulis"]);
     $penerbit = htmlspecialchars($data["penerbit"]);
     $tahun_terbit = htmlspecialchars($data["tahun_terbit"]);
-    $gambar = htmlspecialchars($data["gambar"]);
+    $gambarLama = htmlspecialchars($data["gambarLama"]);
+
+        if($_FILES['gambar']['error'] === 5 ) {
+            $gambar = $gambarLama;
+        } else {
+            $gambar = upload();
+        }
+
     $stok = htmlspecialchars($data["stok"]);
 
     $query = "UPDATE buku SET
@@ -120,8 +179,5 @@ function registrasi($data) {
 
     return mysqli_affected_rows($conn);
 }
-
-
-
 
 ?>

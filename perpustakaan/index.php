@@ -34,7 +34,7 @@ if( isset($_POST["cari"])) {
     
             <h1>Daftar Buku Perpustakaan</h1>
 
-            <a href="login.php" class="logout">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="logout.php" class="logout">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
 
         <hr class="garis">

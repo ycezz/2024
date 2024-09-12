@@ -48,7 +48,7 @@ if( isset($_POST["submit"]) ) {
     
             <h1>Tambah Buku Perpustakaan</h1>
 
-            <a href="#" class="logout">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="logout.php" class="logout">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
 
         <form action="" method="post">

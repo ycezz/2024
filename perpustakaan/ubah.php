@@ -53,7 +53,7 @@ if( isset($_POST["submit"]) ) {
     
             <h1>Ubah Data Buku</h1>
 
-            <a href="">Logout</a>
+            <a href="logout.php">Logout</a>
         </div>
 
         <form action="" method="post">
@@ -82,7 +82,7 @@ if( isset($_POST["submit"]) ) {
                 </li>
                 <li>
                     <label for="gambar">Gambar : </label>
-                    <img src="./img/<?= $buku["gambar"]; ?>">
+                    <img src="./img/<?= $buku["gambar"]; ?>" width="40">
                     <input type="file" name="gambar" id="gambar" required class="input-tambah" value="<?= $buku["gambar"]; ?>">
                 </li>
                 <li>
