@@ -56,7 +56,7 @@ if( isset($_POST["submit"]) ) {
             <a href="logout.php">Logout</a>
         </div>
 
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id_buku" value="<?= $buku["id_buku"]; ?>">
             <input type="hidden" name="gambarLama" value="<?= $buku["gambar"]; ?>">
             <ul>
@@ -82,8 +82,8 @@ if( isset($_POST["submit"]) ) {
                 </li>
                 <li>
                     <label for="gambar">Gambar : </label>
-                    <img src="./img/<?= $buku["gambar"]; ?>" width="40">
-                    <input type="file" name="gambar" id="gambar" required class="input-tambah" value="<?= $buku["gambar"]; ?>">
+                    <img src="./img/<?= $buku["gambar"]; ?>" width="40"><br>
+                    <input type="file" name="gambar" id="gambar">
                 </li>
                 <li>
                     <label for="stok">Stok : </label>

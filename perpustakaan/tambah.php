@@ -22,7 +22,7 @@ if( isset($_POST["submit"]) ) {
     } else {
         echo " 
             <script>
-                alert('Data gagal ditambahkan!');
+                alert('Data buku gagal ditambahkan!');
                 document.location.href = 'index.php'; 
             </script>
         ";
@@ -51,7 +51,7 @@ if( isset($_POST["submit"]) ) {
             <a href="logout.php" class="logout">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
 
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             <ul>
                 <li>
                     <label for="nrb">NRB : </label>
@@ -75,8 +75,7 @@ if( isset($_POST["submit"]) ) {
                 </li>
                 <li>
                     <label for="gambar">Gambar : </label>
-                    <label for="gambar" class="custom-file-upload">Upload file</label>
-                    <input type="file" name="gambar" id="gambar" class="input-tambah" required>
+                    <input type="file" name="gambar" id="gambar">
                 </li>
                 <li>
                     <label for="stok">Stok : </label>
