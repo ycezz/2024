@@ -74,7 +74,7 @@ if( isset($_POST["cari"])) {
                     </td>
                     <td data-label="Gambar"><img src="./img/<?= $row["gambar"]; ?>" width="50"></td>
                     <td data-label="NRB"><?= $row["nrb"]; ?></td>
-                    <td data-label="Judul"><?= $row["judul"]; ?></td>
+                    <td data-label="Judul" style="width: 20%;"><?= $row["judul"]; ?></td>
                     <td data-label="Penulis"><?= $row["penulis"]; ?></td>
                     <td data-label="Penerbit"><?= $row["penerbit"]; ?></td>
                     <td data-label="Tahun Terbit"><?= $row["tahun_terbit"]; ?></td>
