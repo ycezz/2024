@@ -7,24 +7,24 @@ class Matematika {
     
     public function __construct()
     {
-        // Meningkatkan jumlah setiap kali objek baru dibuat
+        // digunakan untuk menghitung berapa kali class diinstansiasi.
         self::$angka++;
     }
 
-    public static function kali()
+    public static function kali($nilai) //=> method static diakses langsung melalui class tanpa memerlukan objek
     {
-        return self::$angka * self::$pi;
+        return $nilai * self::$pi;
+        // self::$pi yang bersifat static. Properti ini bisa diakses langsung melalui class, tanpa harus membuat objek terlebih dahulu.
     }
 
-    public static function tambah()
+    public static function tambah($nilai)
     {
-        return self::$angka + self::$pi;
+        return $nilai + self::$pi;
     }
 
 }
 
-$m1 = new Matematika();
 
-echo "Kali: " . $m1->kali(5);
+echo "Hasil kali: " . Matematika::kali(5);
 echo "<br>";
-echo "Tambah: " . $m1->tambah(3);
+echo "Hasil tambah: " . Matematika::tambah(7);
