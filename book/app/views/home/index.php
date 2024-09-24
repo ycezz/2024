@@ -2,7 +2,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-xxl">
-        <a href="#intro" class="navbar-brand"
+        <a href="javascript:void(0);" class="navbar-brand"
           ><span class="fw-bold text-secondary">
             <i class="bi bi-book-half"></i>
             the book 📖</span
@@ -29,16 +29,19 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#topics">About The Book</a>
+              <a class="nav-link" href="javascript:void(0);" data-target="intro">About The Book</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Get in Touch</a>
+              <a class="nav-link" href="javascript:void(0);" data-target="pricing">Get in Touch</a>
             </li>
             <li class="nav-item d-md-none">
-              <a class="nav-link" href="#pricing">Pricing</a>
+              <a class="nav-link" href="javascript:void(0);" data-target="pricing">Pricing</a>
+            </li>
+            <li class="nav-item d-md-none">
+              <a class="nav-link" href="javascript:void(0);" data-target="contact">Contact</a>
             </li>
             <li class="nav-item ms-2 d-none d-md-inline">
-              <a class="btn btn-secondary" href="#pricing">buy now</a>
+              <a class="btn btn-secondary" href="javascript:void(0);" data-target="pricing">buy now</a>
             </li>
           </ul>
         </div>
@@ -58,7 +61,7 @@
             <p class="lead my-4 text-muted">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+            <a href="javascript:void(0);" class="btn btn-secondary btn-lg" data-target="pricing">Buy Now</a>
             <!-- open sidebar / offcanvas -->
             <a
               href="#sidebar"
@@ -440,3 +443,15 @@
         </div>
       </div>
     </section>
+
+    <!-- Back to top button -->
+<button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+        <i class="fas fa-arrow-up"></i>
+</button>
+
+
+    
