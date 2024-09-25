@@ -27,7 +27,7 @@ try {
             break;
     }
 } catch (Exception $e) {
-    // Log the error and show a user-friendly message
+    // Tampilkan pesan kesalahan
     error_log($e->getMessage());
     echo "An error occurred. Please try again later.";
 }
